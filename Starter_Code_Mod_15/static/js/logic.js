@@ -24,10 +24,7 @@ centerMarker.bindPopup("myMap Center [0,0]");
 let queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson";
 
 // Fetch the earthquake data
-fetch(queryUrl)
-  .then(function(response) {
-      return response.json();
-  })
+d3.json(queryUrl)
   .then(function(data) {
       // Earthquake data plotting...
       data.features.forEach(function(earthquake) {
@@ -70,3 +67,7 @@ fetch(queryUrl)
       // Adding the legend to the map
       legend.addTo(myMap);
   });
+
+
+  
+  

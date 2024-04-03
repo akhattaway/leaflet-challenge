@@ -48,7 +48,7 @@ d3.json(queryUrl)
       
       // Set up the legend
       let legend = L.control({ position: "bottomright" });
-
+      //add div, grades, labels
       legend.onAdd = function() {
           let div = L.DomUtil.create("div", "info legend");
           let grades = [4.5, 5.5, 6.5];
